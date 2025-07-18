@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h2>Hello World</h2>
+<>
+
+    <h2 id="'title">DOM LESSONs</h2>
+    <h1>Code Lab</h1>
+    <p>This is paragraph</p>
+    <p>This is good </p>
+
+    <input type="text" name="" id="userName">
+    <button id="btn-click" onmouseover="MouseOverFunction()">Click</button>
+
+    <input type="text"  name="userName" id="title" class="title" value="code lab">
+
+    <select name="" id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti totam sed architecto magni amet tempora! Odit dolor fugit doloribus cum, unde quaerat, dignissimos iure velit, quas voluptas alias quidem.</p>
 </body>
-<script src="apps.js"></script>
+<script>
+    //id
+    let header=document.getElementById("title") //element
+     let MouseOverFunction=()=>console.log('Click Function Call')
+
+    let helloWorldClick= document.getElementById('btn-click')
+        helloWorldClick.addEventListener('click',()=>console.log('Hello World'))
+
+    let userName=document.getElementById('userName')
+        userName.addEventListener('keydown',()=>console.log(userName.value))
+   
+    let gender=document.getElementById('gender')
+        gender.addEventListener('change',function(){
+            console.log(`Gender ${gender.value} changeEvent Call`)
+        })
+</script>
 </html>
