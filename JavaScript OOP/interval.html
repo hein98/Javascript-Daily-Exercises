@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interval and Timeout</title>
+  </head>
+  <body>
+    <h1>INTERVAL</h1>
+
+    <script>
+      // Example: setInterval
+      let count = 0;
+      setInterval(() => {
+        console.log(`Welcome all ${count}`);
+        count++;
+      }, 1000); // 1 second interval
+
+      // Example: setTimeout to simulate server response
+      setTimeout(() => {
+        let serverResp = [
+          { name: 'Code Lab', email: 'codelab@gmail.com' },
+          { name: 'CL 2', email: 'codelab2@gmail.com' },
+          { name: 'CL 3', email: 'codelab3@gmail.com' },
+          { name: 'CL 4', email: 'codelab4@gmail.com' }
+        ];
+
+        serverResp.forEach((item) => {
+          document.write(`<span style="color:red">
+            ${item.name} - ${item.email}<br>
+          </span>`);
+        });
+      }, 5000); // delay by 5 seconds
+    </script>
+  </body>
+</html>

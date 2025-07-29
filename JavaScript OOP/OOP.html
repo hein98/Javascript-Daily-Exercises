@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>OOP</h1>
+  </body>
+  <script>
+    class User {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      static greetings() {
+        console.log("Hello World");
+      }
+    }
+
+    class Child extends User {
+      constructor(name, age, gender) {
+        super(name,age)
+        this.gender = gender;   
+      }
+    }
+
+    let userOne = new User("Mike", "Developer");
+    let userTwo = new User("William", "UIUX");
+    let userThree = new Child("Patrick", "Sales", "Male");
+
+    console.log(userOne);
+    console.log(userTwo);
+    console.log(User.greetings());
+
+    console.log(userThree);
+  </script>
+</html>
